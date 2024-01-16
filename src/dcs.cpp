@@ -1,6 +1,12 @@
 #include "sim/dcs.hpp"
 
+#ifdef TARGET_UNO
 #define DCSBIOS_IRQ_SERIAL
+#endif
+
+#ifdef TARGET_ESP
+#define DCSBIOS_DEFAULT_SERIAL
+#endif
 #include <DcsBios.h>
 
 #include "constants.hpp"
